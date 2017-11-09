@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <script src="./app.js" charset="UTF-8"></script>
+    <title>Saisie de Coordonnées Banquaire</title>
+</head>
+
+<body class="container-fluid">
+    <h1>SGP - Saisie des coordonnées bancaires</h1>
+    <div class="offset-2">
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label class="col-label" for="filtrer">Filtrer par departement :</label>
+            </div>
+            <div class="col-2">
+                <select class="custom-select mb-3 col-2 mb-md-0" id="filtrer">
+                    <option value="Tous" selected>Tous</option>
+                    <option value="Comptabilité">Comptabilité</option>
+                    <option value="Ressources Humaines">Ressources Humaines</option>
+                    <option value="Informatique">Informatique</option>
+                    <option value="Administratif">Administratif</option>
+                </select>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label class="col-label" for="consigne">Rechercher par nom :</label>
+            </div>
+            <div class="col-2">
+                <label class="sr-only" for="recherche">Recherche</label>
+                <div class="input-group mb-2 mb-md-0">
+                    <input type="text" class="form-control" id="recherche" placeholder="Recherche">
+                </div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary col-4">Recherche</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-5" id="moitie1">
+            </div>
+            <div class="col-5">
+                <form id="myform">
+                    <div class="form-group row">
+                        <label for="inputBanque" class="col-3 col-form-label text-right">Banque</label>
+                        <div class="col-5">
+                            <input type="text" name="nom" class="form-control" id="inputBanque" placeholder="Nom de la banque">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputIban" class="col-3 col-form-label text-right">IBAN</label>
+                        <div class="col-5">
+                            <input type="text" name="iban" class="form-control" id="inputIban" placeholder="Numéro de l'IBAN">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputBic" class="col-3 col-form-label text-right">BIC</label>
+                        <div class="col-5">
+                            <input type="text" name="bic" class="form-control" id="inputBic" placeholder="Numéro du BIC">
+                            <div class="float-right" id="divSave">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
